@@ -1,11 +1,18 @@
 library(Biostrings)
 download.file("C:\Users\whert\Downloads\Manatee Gene\Manatee1.fasta")
 genome = readDNAStringSet("Manatee1.fasta")
-readDNAStringSet("Manatee5.fasta")
+manatee5 <- readDNAStringSet("Manatee5.fasta")
+manatee4 <- readDNAStringSet("Manatee4.fasta")
+manatee3 <- readDNAStringSet("Manatee3.fasta")
+manatee2 <- readDNAStringSet("Manatee2.fasta")
+manatee1 <- readDNAStringSet("Manatee1.fasta")
 fasta.seqlengths("Manatee5.fasta")
 print(,show="complete")
 c("Manatee1.fasta,Manatee2.fasta,Manatee3.fasta,Manatee4.fasta,Manatee5.fasta")
 combine("Manatee1.fasta,Manatee2.fasta,Manatee3.fasta,Manatee4.fasta,Manatee5.fasta")
-library(seqi
-        as.matrix(d)[1:5, "Manatee.fasta", drop=FALSE]
-        
+library(seqinr)
+readDNAStringSet("Manatee1.fasta")
+ManateeGene <- c(manatee1,manatee2,manatee3,manatee4,manatee5)
+print(ManateeGene, show="complete")
+ManateeAA <- Biostrings::translate(manatee1)
+ManateeAA
